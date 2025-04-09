@@ -1,58 +1,28 @@
 import psycopg2
+from psycopg2.extras import DictCursor
 from config import DB_CONFIG
 
-def get_connection():
-    return psycopg2.connect(**DB_CONFIG)
+conn = psycopg2.connect(**DB_CONFIG)
 
-def create_poll(title, description, creator_id):
-    conn = get_connection()
-    cur = conn.cursor()
-    cur.execute("""
-        INSERT INTO polls (title, description, creator_id)
-        VALUES (%s, %s, %s)
-        RETURNING id
-    """, (title, description, creator_id))
-    poll_id = cur.fetchone()[0]
-    conn.commit()
-    cur.close()
-    conn.close()
-    return poll_id
+def get_poll(poll_id):
+    with conn.cursor(cursor_factory=DictCursor) as cur:
+        cur.execute("SELECT * FROM polls WHERE id = %s", (poll_id,))
+        return cur.fetchone()
 
-def add_question_to_poll(poll_id, text, is_open):
-    conn = get_connection()
-    cur = conn.cursor()
-    cur.execute("""
-        INSERT INTO questions (poll_id, text, is_open)
-        VALUES (%s, %s, %s)
-        RETURNING id
-    """, (poll_id, text, is_open))
-    q_id = cur.fetchone()[0]
-    conn.commit()
-    cur.close()
-    conn.close()
-    return q_id
+def get_questions(poll_id):
+    with conn.cursor(cursor_factory=DictCursor) as cur:
+        cur.execute("SELECT * FROM questions WHERE poll_id = %s ORDER BY id", (poll_id,))
+        return cur.fetchall()
 
-def add_option_to_question(question_id, text):
-    conn = get_connection()
-    cur = conn.cursor()
-    cur.execute("""
-        INSERT INTO options (question_id, text)
-        VALUES (%s, %s)
-    """, (question_id, text))
-    conn.commit()
-    cur.close()
-    conn.close()
+def get_options(question_id):
+    with conn.cursor(cursor_factory=DictCursor) as cur:
+        cur.execute("SELECT * FROM options WHERE question_id = %s ORDER BY id", (question_id,))
+        return cur.fetchall()
 
-
-def get_users_in_chat(chat_id):
-    conn = get_connection()
-    cur = conn.cursor()
-    cur.execute("""
-        SELECT u.id FROM users u
-        JOIN chat_members cm ON cm.user_id = u.id
-        WHERE cm.chat_id = %s
-    """, (chat_id,))
-    result = cur.fetchall()
-    cur.close()
-    conn.close()
-    return [{'id': row[0]} for row in result]
+def save_answer(user_id, question_id, text):
+    with conn.cursor() as cur:
+        cur.execute(
+            "INSERT INTO answers (user_id, question_id, text) VALUES (%s, %s, %s)",
+            (user_id, question_id, text)
+        )
+        conn.commit()

@@ -1,9 +1,9 @@
-TOKEN = "ВАШ_ТОКЕН_ЗДЕСЬ"
+BOT_TOKEN = "your_token_here"
 
 DB_CONFIG = {
-    "dbname": "pollbot",
-    "user": "postgres",
-    "password": "ваш_пароль",
+    "dbname": "your_db",
+    "user": "your_user",
+    "password": "your_password",
     "host": "localhost",
     "port": 5432
 }
