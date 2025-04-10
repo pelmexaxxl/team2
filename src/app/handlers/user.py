@@ -1,10 +1,11 @@
-from aiogram import Router, F
+from aiogram import Router, F, Bot, Dispatcher
 from aiogram.types import Message, CallbackQuery
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 from sqlalchemy.orm import selectinload
+from aiogram.fsm.storage.memory import MemoryStorage, StorageKey
 
 from app.models.user import User, Role, Poll, Question, UserAnswer
 
@@ -34,7 +35,7 @@ async def start_registration(msg: Message, state: FSMContext, session: AsyncSess
 
 
 @router.message(F.text == "/send_poll")
-async def send_poll_command(msg: Message, session: AsyncSession, state: FSMContext):
+async def send_poll_command(msg: Message, session: AsyncSession, bot: Bot, dispatcher: Dispatcher):
     tg_id = msg.from_user.id
     hr = await session.scalar(select(User).where(User.tg_id == tg_id))
 
@@ -52,23 +53,24 @@ async def send_poll_command(msg: Message, session: AsyncSession, state: FSMConte
     ]
 
         for employee in employees:
-            # Отправим первый вопрос
             question = questions_data[0]
             options_text = "\n".join(f"{i+1}) {opt}" for i, opt in enumerate(question["options"]))
             await msg.bot.send_message(
                 chat_id=employee.tg_id,
                 text=f"{question['text']}\n\n{options_text}\n\nОтветьте числом."
             )
+            
+            storage_key = StorageKey(bot_id=bot.id, user_id=employee.tg_id, chat_id=employee.tg_id)
+            employee_context = FSMContext(storage=dispatcher.storage, key=storage_key)
 
-            # Сохраняем состояние
-            await state.set_data({
+            await employee_context.set_data({
                 "questions": questions_data,
                 "current_index": 0,
                 "poll_id": poll.id,
                 "answers": [],
             })
-            await state.set_state(PollStates.answering)
-            await msg.answer("Опрос разослан всем сотрудникам.")
+            await employee_context.set_state(PollStates.answering)
+        await msg.answer("Опрос разослан всем сотрудникам.")
     else:
         await msg.answer("Только HR может отправлять опросы.")
 
@@ -88,7 +90,6 @@ async def process_poll_answer(msg: Message, state: FSMContext, session: AsyncSes
 
     selected_index = int(answer_text) - 1
 
-    # Сохраняем текущий ответ
     answers.append({
         "question_id": questions[index]["id"],
         "selected_option": selected_index
@@ -108,7 +109,6 @@ async def process_poll_answer(msg: Message, state: FSMContext, session: AsyncSes
             "answers": answers,
         })
     else:
-        # Все ответы собраны — сохраняем в БД
         user_id = msg.from_user.id
 
         for ans in answers:
@@ -122,7 +122,6 @@ async def process_poll_answer(msg: Message, state: FSMContext, session: AsyncSes
         await session.commit()
         await msg.answer("Спасибо за прохождение опроса!")
         await state.clear()
-
 
 
 @router.message(F.text == "/results")

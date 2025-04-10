@@ -1198,3 +1198,111 @@ sqlalchemy.exc.MissingGreenlet: greenlet_spawn has not been called; can't call a
 2025-04-10 07:37:39,719 - aiogram.dispatcher - INFO - Start polling
 2025-04-10 07:37:40,186 - aiogram.dispatcher - INFO - Run polling for bot @moodchecker2_bot id=7980684199 - 'mood_checker'
 2025-04-10 07:37:43,410 - aiogram.event - INFO - Update id=378313191 is handled. Duration 484 ms by bot id=7980684199
+2025-04-10 07:51:11,372 - aiogram.dispatcher - INFO - Start polling
+2025-04-10 07:51:11,762 - aiogram.dispatcher - INFO - Run polling for bot @moodchecker2_bot id=7980684199 - 'mood_checker'
+2025-04-10 07:51:24,049 - aiogram.event - INFO - Update id=378313192 is handled. Duration 473 ms by bot id=7980684199
+2025-04-10 07:51:35,533 - aiogram.event - INFO - Update id=378313193 is handled. Duration 185 ms by bot id=7980684199
+2025-04-10 07:52:25,737 - aiogram.event - INFO - Update id=378313194 is handled. Duration 172 ms by bot id=7980684199
+2025-04-10 07:52:36,679 - aiogram.event - INFO - Update id=378313195 is handled. Duration 120 ms by bot id=7980684199
+2025-04-10 07:52:44,928 - aiogram.event - INFO - Update id=378313196 is handled. Duration 143 ms by bot id=7980684199
+2025-04-10 07:52:50,767 - aiogram.event - INFO - Update id=378313197 is handled. Duration 147 ms by bot id=7980684199
+2025-04-10 07:52:52,863 - aiogram.event - INFO - Update id=378313198 is handled. Duration 337 ms by bot id=7980684199
+2025-04-10 07:52:58,903 - aiogram.event - INFO - Update id=378313199 is handled. Duration 131 ms by bot id=7980684199
+2025-04-10 07:53:03,973 - aiogram.event - INFO - Update id=378313200 is handled. Duration 208 ms by bot id=7980684199
+2025-04-10 07:53:06,077 - aiogram.event - INFO - Update id=378313201 is handled. Duration 423 ms by bot id=7980684199
+2025-04-10 07:53:11,646 - aiogram.event - INFO - Update id=378313202 is handled. Duration 131 ms by bot id=7980684199
+2025-04-10 07:54:16,749 - aiogram.event - INFO - Update id=378313203 is handled. Duration 140 ms by bot id=7980684199
+2025-04-10 07:54:18,822 - aiogram.event - INFO - Update id=378313204 is handled. Duration 467 ms by bot id=7980684199
+2025-04-10 07:54:20,972 - aiogram.event - INFO - Update id=378313205 is handled. Duration 347 ms by bot id=7980684199
+2025-04-10 07:54:43,641 - aiogram.event - INFO - Update id=378313206 is handled. Duration 137 ms by bot id=7980684199
+2025-04-10 07:55:03,114 - aiogram.event - INFO - Update id=378313207 is handled. Duration 1201 ms by bot id=7980684199
+2025-04-10 07:55:25,512 - aiogram.event - INFO - Update id=378313208 is not handled. Duration 7 ms by bot id=7980684199
+2025-04-10 07:56:16,747 - aiogram.event - INFO - Update id=378313209 is not handled. Duration 8 ms by bot id=7980684199
+2025-04-10 07:56:16,971 - aiogram.event - INFO - Update id=378313210 is not handled. Duration 3 ms by bot id=7980684199
+2025-04-10 07:56:17,207 - aiogram.event - INFO - Update id=378313211 is not handled. Duration 3 ms by bot id=7980684199
+2025-04-10 07:56:17,347 - aiogram.event - INFO - Update id=378313212 is not handled. Duration 5 ms by bot id=7980684199
+2025-04-10 07:56:17,545 - aiogram.event - INFO - Update id=378313213 is not handled. Duration 2 ms by bot id=7980684199
+2025-04-10 07:56:18,913 - aiogram.event - INFO - Update id=378313214 is not handled. Duration 2 ms by bot id=7980684199
+2025-04-10 07:57:34,442 - aiogram.event - INFO - Update id=378313215 is not handled. Duration 1 ms by bot id=7980684199
+2025-04-10 08:00:23,764 - aiogram.dispatcher - INFO - Start polling
+2025-04-10 08:00:39,195 - aiogram.dispatcher - INFO - Run polling for bot @moodchecker2_bot id=7980684199 - 'mood_checker'
+2025-04-10 08:00:40,397 - aiogram.event - INFO - Update id=378313216 is handled. Duration 1084 ms by bot id=7980684199
+2025-04-10 08:00:49,724 - aiogram.event - INFO - Update id=378313217 is not handled. Duration 2 ms by bot id=7980684199
+2025-04-10 08:01:44,262 - aiogram.event - INFO - Update id=378313218 is not handled. Duration 3 ms by bot id=7980684199
+2025-04-10 08:03:43,434 - aiogram.dispatcher - INFO - Start polling
+2025-04-10 08:03:43,778 - aiogram.dispatcher - INFO - Run polling for bot @moodchecker2_bot id=7980684199 - 'mood_checker'
+2025-04-10 08:03:46,976 - aiogram.event - INFO - Update id=378313219 is handled. Duration 1188 ms by bot id=7980684199
+2025-04-10 08:04:07,462 - aiogram.event - INFO - Update id=378313220 is not handled. Duration 1 ms by bot id=7980684199
+2025-04-10 08:04:14,398 - aiogram.event - INFO - Update id=378313221 is not handled. Duration 2 ms by bot id=7980684199
+2025-04-10 08:08:31,262 - aiogram.event - INFO - Update id=378313222 is not handled. Duration 4 ms by bot id=7980684199
+2025-04-10 08:11:29,495 - aiogram.dispatcher - INFO - Start polling
+2025-04-10 08:11:29,895 - aiogram.dispatcher - INFO - Run polling for bot @moodchecker2_bot id=7980684199 - 'mood_checker'
+2025-04-10 08:11:33,843 - aiogram.event - INFO - Update id=378313223 is not handled. Duration 758 ms by bot id=7980684199
+2025-04-10 08:11:33,844 - aiogram.event - ERROR - Cause exception while process update id=378313223 by bot id=7980684199
+AttributeError: 'Bot' object has no attribute 'storage'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/app/middlewares/db.py", line 21, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/app/src/app/handlers/user.py", line 64, in send_poll_command
+    employee_context = FSMContext(storage=bot.storage, key=storage_key)
+                                          ^^^^^^^^^^^
+AttributeError: 'Bot' object has no attribute 'storage'
+2025-04-10 08:13:05,057 - aiogram.dispatcher - INFO - Start polling
+2025-04-10 08:13:05,439 - aiogram.dispatcher - INFO - Run polling for bot @moodchecker2_bot id=7980684199 - 'mood_checker'
+2025-04-10 08:13:11,001 - aiogram.event - INFO - Update id=378313224 is handled. Duration 877 ms by bot id=7980684199
+2025-04-10 08:13:34,292 - aiogram.event - INFO - Update id=378313225 is handled. Duration 166 ms by bot id=7980684199
+2025-04-10 08:13:40,521 - aiogram.event - INFO - Update id=378313226 is handled. Duration 147 ms by bot id=7980684199
+2025-04-10 08:13:47,298 - aiogram.event - INFO - Update id=378313227 is handled. Duration 193 ms by bot id=7980684199
+2025-04-10 08:14:11,385 - aiogram.event - INFO - Update id=378313228 is handled. Duration 183 ms by bot id=7980684199
+2025-04-10 08:14:30,995 - aiogram.event - INFO - Update id=378313229 is handled. Duration 207 ms by bot id=7980684199
+2025-04-10 08:15:14,320 - aiogram.dispatcher - INFO - Start polling
+2025-04-10 08:15:14,718 - aiogram.dispatcher - INFO - Run polling for bot @moodchecker2_bot id=7980684199 - 'mood_checker'

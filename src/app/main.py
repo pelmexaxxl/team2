@@ -4,9 +4,12 @@ from app.configs import settings
 from app.handlers.user import router as user_router
 from app.handlers.admin import router as admin_router
 from app.middlewares.db import DatabaseMiddleware
+from aiogram.fsm.storage.memory import MemoryStorage
+
 
 bot = Bot(settings.BOT_TOKEN)
-dp = Dispatcher()
+storage = MemoryStorage()
+dp = Dispatcher(storage=storage)
 dp.message.middleware(DatabaseMiddleware())
 dp.include_router(user_router)
 dp.include_router(admin_router)
