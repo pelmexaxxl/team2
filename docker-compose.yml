@@ -1,0 +1,24 @@
+services:
+  bot:
+    build: .
+    command: sh -c "alembic upgrade head && python -m app.main"
+    depends_on:
+      - db
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./src/alembic/versions/:/app/src/alembic/versions
+      - ./logs/:/app/logs/
+  
+  db:
+    image: postgres:16
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+
+volumes:
+  postgres_data:
