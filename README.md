@@ -1,30 +1,99 @@
+# TODO: Интеграция анализа сообщений через YandexGPT
+
+## ✅ Сделано
+
+- [x] Создан модуль `analytics.py` с вызовом YandexGPT
+- [ ] Загружены настройки из `.env` через `configs.py`
+
+   ```
+   YANDEX_API_KEY=your-yandex-api-key
+   DATABASE_URL=postgresql://user:password@host/dbname
+   ```
+
+- [x] Реализована функция `analyze_chat_messages` (выборка, анализ, запись в БД)
+   - [ ] Добавить таблицу chat_analytics
+
+   ```
+    CREATE TABLE chat_analytics (
+    id SERIAL PRIMARY KEY,
+    analyzed_at TIMESTAMP NOT NULL,
+    result TEXT NOT NULL
+    );
+   ```
+
+- [x] Создан обработчик `handlers/analyze.py` с командой `/analyze_chat`
+- [x] Подключение хендлера в `main.py` через `include_router`
+- [x] Добавлена поддержка asyncpg, aiohttp, dotenv в зависимости
+
+## 🔲 Что можно сделать
+
+### 📦 Инфраструктура
+
+- [ ] Создать файл `.env.example` с описанием переменных
+- [ ] Добавить `DATABASE_URL` и `YANDEX_API_KEY` в `.env`
+- [ ] Добавить `chat_analytics` через Alembic миграцию
+
+### 🔒 Безопасность
+
+- [ ] Ограничить команду `/analyze_chat` фильтром по user_id (только для админов)
+
+### ⏱ Автоматизация
+
+- [ ] Настроить автоматический запуск анализа (через `APScheduler` или cron)
+- [ ] Отправлять результат анализа в Telegram-чат/админу автоматически
+
+---
+
+# *Structure*
+
 ```
-team2/
-├─ logs/                  # сюда пишет ротационный логгер; папка уже заведена, но в Git хранится пустой
-│
-├─ src/                   # вся рабочая логика; запускается из контейнера
-│  ├─ app/                # «боевое» приложение-бот
-│  │  ├─ __init__.py
-│  │  ├─ bot.py          # точка входа, инициализирует Aiogram v3 Dispatcher
-│  │  ├─ config.py       # загрузка .env / переменных окружения
-│  │  ├─ db/             # слой доступа к PostgreSQL (asyncpg + SQLAlchemy)
-│  │  │   └─ __init__.py (+ модели)
-│  │  ├─ handlers/       # роутинги и FSM-состояния
-│  │  │   ├─ admin.py    # создание/редактирование пульс-опросов
-│  │  │   └─ respond.py  # прохождение и сохранение ответов
-│  │  ├─ keyboards/      # Inline/Reply-клавиатуры (callback-датаклассы внутри)
-│  │  ├─ middlewares/    # логирование, Throttling, локализация
-│  │  └─ services/       # доменная логика; здесь, например, poll_manager.py
-│  │
-│  ├─ alembic/           # миграции базы (генерируются из моделей)
-│  │   └─ versions/…     # авто-/ручные ревизии
-│  ├─ alembic.ini        # конфиг миграционного движка
-│  └─ table_structure.sql# дамп начальной схемы (удобно для быстрого локального старта)
-│
-├─ .gitignore            # стандартные правила + исключения для локальных env-файлов
-├─ Dockerfile            # образ python:3.12-slim, копирует ./src и ставит requirements
-├─ docker-compose.yml    # поднимает bot + postgres + (опционально) pgAdmin
-├─ requirements.txt      # «фиксированные» версии библиотек (Aiogram v3, SQLAlchemy 2.0…)
-└─ README.md             # описание, инструкция запуска, то же дерево каталога
+team2
+├─ Dockerfile
+├─ README.md
+├─ docker-compose.yml
+├─ logs
+│  └─ bot_log.log
+├─ requirements.txt
+└─ src
+   ├─ alembic
+   │  ├─ README
+   │  ├─ env.py
+   │  ├─ script.py.mako
+   │  └─ versions
+   │     ├─ __pycache__
+   │     │  └─ d1c5e7ce77ed_initial.cpython-312.pyc
+   │     └─ d1c5e7ce77ed_initial.py
+   ├─ alembic.ini
+   ├─ app
+   │  ├─ __init__.py
+   │  ├─ configs.py
+   │  ├─ db
+   │  │  ├─ __init__.py
+   │  │  └─ db.py
+   │  ├─ db.py
+   │  ├─ handlers
+   │  │  ├─ __init__.py
+   │  │  ├─ admin.py
+   │  │  ├─ analyze.py
+   │  │  ├─ respond.py
+   │  │  └─ user.py
+   │  ├─ main.py
+   │  ├─ middlewares
+   │  │  ├─ __init__.py
+   │  │  └─ db.py
+   │  ├─ models
+   │  │  ├─ __init__.py
+   │  │  ├─ base.py
+   │  │  └─ user.py
+   │  ├─ services
+   │  │  ├─ __init__.py
+   │  │  ├─ admin.py
+   │  │  ├─ analytics.py
+   │  │  └─ poll_manager.py
+   │  └─ utils
+   │     ├─ __init__.py
+   │     ├─ emotions.py
+   │     └─ questions.py
+   └─ table_structure.sql
 
 ```

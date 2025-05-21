@@ -1,5 +1,6 @@
 from aiogram import Bot, Dispatcher
 
+from app.handlers import analyze
 from app.configs import settings
 from app.handlers.user import router as user_router
 from app.handlers.admin import router as admin_router
@@ -13,7 +14,7 @@ dp = Dispatcher(storage=storage)
 dp.message.middleware(DatabaseMiddleware())
 dp.include_router(user_router)
 dp.include_router(admin_router)
-
+dp.include_router(analyze.router)
 
 async def main():
     await dp.start_polling(bot)

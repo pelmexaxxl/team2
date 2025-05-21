@@ -2,6 +2,16 @@ import os
 
 from dotenv import load_dotenv
 
+from pydantic import BaseSettings
+
+class Settings(BaseSettings):
+    yandex_api_key: str
+    database_url: str
+
+    class Config:
+        env_file = ".env"
+
+settings = Settings()
 
 load_dotenv()
 
