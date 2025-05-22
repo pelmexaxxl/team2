@@ -77,6 +77,7 @@ async def help_command(message: Message):
 /stop_collecting - Остановить сбор сообщений
 /analyze_chat - Проанализировать сообщения чата
 /analyze_all_chats - Проанализировать все чаты (для админа)
+/ask_chat_gpt [часы] - Задать вопрос Яндекс ГПТ о сообщениях чата (по умолчанию за последние 24 часа)
 /help - Показать эту справку
 """
     await message.answer(help_text)

@@ -26,7 +26,7 @@ dp.message.middleware(DatabaseMiddleware())
 # Команды имеют более высокий приоритет
 user_router.message.filter(lambda msg: msg.text and msg.text.startswith("/"))
 admin_router.message.filter(lambda msg: msg.text and msg.text.startswith("/"))
-analyze.router.message.filter(lambda msg: msg.text and msg.text.startswith("/"))
+# Для анализа не устанавливаем фильтр по команде, так как нам нужны и обычные сообщения для FSM
 
 # Важен порядок подключения роутеров!
 # 1. Сначала специальные обработчики для команд

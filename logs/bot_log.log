@@ -1528,3 +1528,607 @@ asyncpg.exceptions._base.ClientConfigurationError: invalid DSN: scheme is expect
 2025-05-22 13:02:10,466 - app.handlers.message_collector - INFO - Received stop_collecting command in chat -4847620559
 2025-05-22 13:02:10,619 - app.handlers.message_collector - INFO - Stopped collecting messages in chat -4847620559
 2025-05-22 13:02:10,625 - aiogram.event - INFO - Update id=378313259 is handled. Duration 161 ms by bot id=7980684199
+2025-05-22 14:41:26,181 - __main__ - INFO - Bot configuration:
+2025-05-22 14:41:26,182 - __main__ - INFO - - BOT_TOKEN: configured
+2025-05-22 14:41:26,183 - __main__ - INFO - - DATABASE_URL: postgresql://mood:mood_helper@db:5432/mood
+2025-05-22 14:41:26,184 - __main__ - INFO - - ADMIN_USER_ID: 811775689
+2025-05-22 14:41:26,184 - __main__ - INFO - Registered handlers in order of priority:
+2025-05-22 14:41:26,185 - __main__ - INFO - 1. 0x7f7f8bcefad0
+2025-05-22 14:41:26,186 - __main__ - INFO - 2. 0x7f7f89a63200
+2025-05-22 14:41:26,186 - __main__ - INFO - 3. analyze_router
+2025-05-22 14:41:26,188 - __main__ - INFO - 4. message_collector
+2025-05-22 14:41:26,189 - __main__ - INFO - Daily analysis task scheduled
+2025-05-22 14:41:26,189 - __main__ - INFO - Bot started, listening for messages...
+2025-05-22 14:41:26,190 - aiogram.dispatcher - INFO - Start polling
+2025-05-22 14:41:26,191 - app.services.analytics - INFO - Started daily analysis scheduler
+2025-05-22 14:41:26,191 - app.services.analytics - INFO - Scheduled next daily analysis in 29913.808365 seconds (at 2025-05-22 23:00:00)
+2025-05-22 14:41:26,548 - aiogram.dispatcher - INFO - Run polling for bot @moodchecker2_bot id=7980684199 - 'mood_checker'
+2025-05-22 14:41:26,767 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from GroupAnonymousBot or id 1087968824
+2025-05-22 14:41:26,768 - app.handlers.message_collector - INFO - Message has no text, skipping
+2025-05-22 14:41:26,768 - aiogram.event - INFO - Update id=378313260 is handled. Duration 70 ms by bot id=7980684199
+2025-05-22 14:41:26,769 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -4670240875 from LalkaGadalka or id 381360580
+2025-05-22 14:41:26,769 - app.handlers.message_collector - INFO - Message has no text, skipping
+2025-05-22 14:41:26,770 - aiogram.event - INFO - Update id=378313261 is handled. Duration 72 ms by bot id=7980684199
+2025-05-22 14:41:26,771 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Lobaaashik or id 811775689
+2025-05-22 14:41:26,771 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,773 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Lobaaashik or id 811775689
+2025-05-22 14:41:26,774 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,777 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Lobaaashik or id 811775689
+2025-05-22 14:41:26,778 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,781 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from LalkaGadalka or id 381360580
+2025-05-22 14:41:26,782 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,787 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Lobaaashik or id 811775689
+2025-05-22 14:41:26,788 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,792 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Lobaaashik or id 811775689
+2025-05-22 14:41:26,793 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,797 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Lobaaashik or id 811775689
+2025-05-22 14:41:26,798 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,802 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Lobaaashik or id 811775689
+2025-05-22 14:41:26,803 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,809 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from LalkaGadalka or id 381360580
+2025-05-22 14:41:26,811 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,814 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Lobaaashik or id 811775689
+2025-05-22 14:41:26,816 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,820 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from LalkaGadalka or id 381360580
+2025-05-22 14:41:26,821 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,823 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from LalkaGadalka or id 381360580
+2025-05-22 14:41:26,824 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,828 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from LalkaGadalka or id 381360580
+2025-05-22 14:41:26,829 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,832 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Tinchurin_Maxim or id 1051394747
+2025-05-22 14:41:26,832 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,835 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Tinchurin_Maxim or id 1051394747
+2025-05-22 14:41:26,835 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,837 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from LalkaGadalka or id 381360580
+2025-05-22 14:41:26,838 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,840 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Tinchurin_Maxim or id 1051394747
+2025-05-22 14:41:26,841 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,843 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Lobaaashik or id 811775689
+2025-05-22 14:41:26,844 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,845 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Tinchurin_Maxim or id 1051394747
+2025-05-22 14:41:26,846 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,848 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Lobaaashik or id 811775689
+2025-05-22 14:41:26,849 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,850 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from LalkaGadalka or id 381360580
+2025-05-22 14:41:26,851 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,852 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from LalkaGadalka or id 381360580
+2025-05-22 14:41:26,853 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,854 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from LalkaGadalka or id 381360580
+2025-05-22 14:41:26,854 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,856 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from LalkaGadalka or id 381360580
+2025-05-22 14:41:26,856 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,858 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from LalkaGadalka or id 381360580
+2025-05-22 14:41:26,858 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,860 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Lobaaashik or id 811775689
+2025-05-22 14:41:26,860 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,861 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from LalkaGadalka or id 381360580
+2025-05-22 14:41:26,862 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,863 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Ivan_962 or id 1957553965
+2025-05-22 14:41:26,863 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,864 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Ivan_962 or id 1957553965
+2025-05-22 14:41:26,865 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,867 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Ivan_962 or id 1957553965
+2025-05-22 14:41:26,868 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,869 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Ivan_962 or id 1957553965
+2025-05-22 14:41:26,869 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,871 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Ivan_962 or id 1957553965
+2025-05-22 14:41:26,871 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,873 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from LalkaGadalka or id 381360580
+2025-05-22 14:41:26,873 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,875 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from LalkaGadalka or id 381360580
+2025-05-22 14:41:26,875 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,877 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Tinchurin_Maxim or id 1051394747
+2025-05-22 14:41:26,877 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,878 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from LalkaGadalka or id 381360580
+2025-05-22 14:41:26,878 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,880 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Tinchurin_Maxim or id 1051394747
+2025-05-22 14:41:26,880 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,881 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from LalkaGadalka or id 381360580
+2025-05-22 14:41:26,882 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,884 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Tinchurin_Maxim or id 1051394747
+2025-05-22 14:41:26,884 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,885 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from LalkaGadalka or id 381360580
+2025-05-22 14:41:26,886 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,887 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Tinchurin_Maxim or id 1051394747
+2025-05-22 14:41:26,888 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,889 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from LalkaGadalka or id 381360580
+2025-05-22 14:41:26,889 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,892 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Tinchurin_Maxim or id 1051394747
+2025-05-22 14:41:26,892 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,894 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from LalkaGadalka or id 381360580
+2025-05-22 14:41:26,894 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,895 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from LalkaGadalka or id 381360580
+2025-05-22 14:41:26,896 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,897 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Tinchurin_Maxim or id 1051394747
+2025-05-22 14:41:26,898 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,899 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Tinchurin_Maxim or id 1051394747
+2025-05-22 14:41:26,899 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,901 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Tinchurin_Maxim or id 1051394747
+2025-05-22 14:41:26,901 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,903 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Tinchurin_Maxim or id 1051394747
+2025-05-22 14:41:26,903 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,904 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from LalkaGadalka or id 381360580
+2025-05-22 14:41:26,905 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,906 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Lobaaashik or id 811775689
+2025-05-22 14:41:26,906 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,971 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Lobaaashik or id 811775689
+2025-05-22 14:41:26,972 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,974 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Lobaaashik or id 811775689
+2025-05-22 14:41:26,974 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,976 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from LalkaGadalka or id 381360580
+2025-05-22 14:41:26,977 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,978 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from LalkaGadalka or id 381360580
+2025-05-22 14:41:26,978 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,981 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Lobaaashik or id 811775689
+2025-05-22 14:41:26,981 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,984 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Lobaaashik or id 811775689
+2025-05-22 14:41:26,984 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,985 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Lobaaashik or id 811775689
+2025-05-22 14:41:26,986 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,987 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Ivan_962 or id 1957553965
+2025-05-22 14:41:26,988 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,989 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Ivan_962 or id 1957553965
+2025-05-22 14:41:26,990 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,991 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Lobaaashik or id 811775689
+2025-05-22 14:41:26,992 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,994 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Tinchurin_Maxim or id 1051394747
+2025-05-22 14:41:26,994 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:26,995 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Ivan_962 or id 1957553965
+2025-05-22 14:41:26,996 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:41:27,392 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:27,393 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:27,394 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:27,395 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,450 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,452 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,454 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,457 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,458 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,460 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,461 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,462 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,512 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,513 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,513 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,514 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,515 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,516 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,517 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,519 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,522 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,524 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,526 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,528 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,529 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,531 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,533 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,534 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,535 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,537 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,538 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,539 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,540 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,542 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,543 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,545 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,547 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,548 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,550 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,551 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,551 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,552 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,554 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,555 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,556 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,557 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,558 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,559 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,561 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,562 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,563 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,564 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,565 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,566 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,568 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,569 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,570 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,572 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,573 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,638 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,644 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,645 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,645 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,646 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,646 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,647 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,647 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,648 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,648 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,649 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,649 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,650 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,651 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,651 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,652 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:28,653 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,653 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,654 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,654 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,655 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,655 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,655 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,656 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,656 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,657 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,657 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,658 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,658 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,659 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,659 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,660 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,660 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,661 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,661 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,662 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,662 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,663 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,663 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,663 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,664 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,664 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,665 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,665 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,666 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,666 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,667 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,667 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,668 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,669 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,669 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,670 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,670 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,670 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,671 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,671 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,672 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,672 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,673 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,673 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,674 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,675 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,675 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,678 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,681 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,682 - app.handlers.message_collector - INFO - No settings found for chat -1002514779321, initializing with default settings
+2025-05-22 14:41:28,683 - app.handlers.message_collector - INFO - Message collection is disabled for chat -1002514779321
+2025-05-22 14:41:28,696 - aiogram.event - INFO - Update id=378313275 is handled. Duration 1992 ms by bot id=7980684199
+2025-05-22 14:41:28,697 - aiogram.event - INFO - Update id=378313314 is handled. Duration 1969 ms by bot id=7980684199
+2025-05-22 14:41:28,698 - aiogram.event - INFO - Update id=378313291 is handled. Duration 1978 ms by bot id=7980684199
+2025-05-22 14:41:28,699 - aiogram.event - INFO - Update id=378313283 is handled. Duration 1983 ms by bot id=7980684199
+2025-05-22 14:41:28,700 - aiogram.event - INFO - Update id=378313274 is handled. Duration 1996 ms by bot id=7980684199
+2025-05-22 14:41:28,701 - aiogram.event - INFO - Update id=378313267 is handled. Duration 2000 ms by bot id=7980684199
+2025-05-22 14:41:28,702 - aiogram.event - INFO - Update id=378313304 is handled. Duration 1976 ms by bot id=7980684199
+2025-05-22 14:41:28,702 - aiogram.event - INFO - Update id=378313276 is handled. Duration 1998 ms by bot id=7980684199
+2025-05-22 14:41:28,703 - aiogram.event - INFO - Update id=378313266 is handled. Duration 2002 ms by bot id=7980684199
+2025-05-22 14:41:28,704 - aiogram.event - INFO - Update id=378313262 is handled. Duration 2005 ms by bot id=7980684199
+2025-05-22 14:41:28,704 - aiogram.event - INFO - Update id=378313270 is handled. Duration 2002 ms by bot id=7980684199
+2025-05-22 14:41:28,705 - aiogram.event - INFO - Update id=378313320 is handled. Duration 1976 ms by bot id=7980684199
+2025-05-22 14:41:28,705 - aiogram.event - INFO - Update id=378313288 is handled. Duration 1986 ms by bot id=7980684199
+2025-05-22 14:41:28,706 - aiogram.event - INFO - Update id=378313296 is handled. Duration 1983 ms by bot id=7980684199
+2025-05-22 14:41:28,706 - aiogram.event - INFO - Update id=378313307 is handled. Duration 1980 ms by bot id=7980684199
+2025-05-22 14:41:28,707 - aiogram.event - INFO - Update id=378313290 is handled. Duration 1987 ms by bot id=7980684199
+2025-05-22 14:41:28,707 - aiogram.event - INFO - Update id=378313293 is handled. Duration 1986 ms by bot id=7980684199
+2025-05-22 14:41:28,708 - aiogram.event - INFO - Update id=378313269 is handled. Duration 2006 ms by bot id=7980684199
+2025-05-22 14:41:28,708 - aiogram.event - INFO - Update id=378313280 is handled. Duration 1997 ms by bot id=7980684199
+2025-05-22 14:41:28,709 - aiogram.event - INFO - Update id=378313286 is handled. Duration 1991 ms by bot id=7980684199
+2025-05-22 14:41:28,710 - aiogram.event - INFO - Update id=378313265 is handled. Duration 2009 ms by bot id=7980684199
+2025-05-22 14:41:28,710 - aiogram.event - INFO - Update id=378313273 is handled. Duration 2007 ms by bot id=7980684199
+2025-05-22 14:41:28,711 - aiogram.event - INFO - Update id=378313308 is handled. Duration 1984 ms by bot id=7980684199
+2025-05-22 14:41:28,711 - aiogram.event - INFO - Update id=378313315 is handled. Duration 1983 ms by bot id=7980684199
+2025-05-22 14:41:28,712 - aiogram.event - INFO - Update id=378313295 is handled. Duration 1990 ms by bot id=7980684199
+2025-05-22 14:41:28,712 - aiogram.event - INFO - Update id=378313263 is handled. Duration 2013 ms by bot id=7980684199
+2025-05-22 14:41:28,712 - aiogram.event - INFO - Update id=378313285 is handled. Duration 1995 ms by bot id=7980684199
+2025-05-22 14:41:28,713 - aiogram.event - INFO - Update id=378313322 is handled. Duration 1984 ms by bot id=7980684199
+2025-05-22 14:41:28,713 - aiogram.event - INFO - Update id=378313271 is handled. Duration 2011 ms by bot id=7980684199
+2025-05-22 14:41:28,714 - aiogram.event - INFO - Update id=378313316 is handled. Duration 1986 ms by bot id=7980684199
+2025-05-22 14:41:28,714 - aiogram.event - INFO - Update id=378313264 is handled. Duration 2015 ms by bot id=7980684199
+2025-05-22 14:41:28,715 - aiogram.event - INFO - Update id=378313311 is handled. Duration 1987 ms by bot id=7980684199
+2025-05-22 14:41:28,715 - aiogram.event - INFO - Update id=378313299 is handled. Duration 1990 ms by bot id=7980684199
+2025-05-22 14:41:28,716 - aiogram.event - INFO - Update id=378313309 is handled. Duration 1989 ms by bot id=7980684199
+2025-05-22 14:41:28,717 - aiogram.event - INFO - Update id=378313292 is handled. Duration 1996 ms by bot id=7980684199
+2025-05-22 14:41:28,717 - aiogram.event - INFO - Update id=378313317 is handled. Duration 1989 ms by bot id=7980684199
+2025-05-22 14:41:28,718 - aiogram.event - INFO - Update id=378313298 is handled. Duration 1994 ms by bot id=7980684199
+2025-05-22 14:41:28,719 - aiogram.event - INFO - Update id=378313284 is handled. Duration 2003 ms by bot id=7980684199
+2025-05-22 14:41:28,719 - aiogram.event - INFO - Update id=378313306 is handled. Duration 1993 ms by bot id=7980684199
+2025-05-22 14:41:28,720 - aiogram.event - INFO - Update id=378313300 is handled. Duration 1995 ms by bot id=7980684199
+2025-05-22 14:41:28,721 - aiogram.event - INFO - Update id=378313282 is handled. Duration 2005 ms by bot id=7980684199
+2025-05-22 14:41:28,721 - aiogram.event - INFO - Update id=378313305 is handled. Duration 1995 ms by bot id=7980684199
+2025-05-22 14:41:28,723 - aiogram.event - INFO - Update id=378313301 is handled. Duration 1997 ms by bot id=7980684199
+2025-05-22 14:41:28,723 - aiogram.event - INFO - Update id=378313289 is handled. Duration 2004 ms by bot id=7980684199
+2025-05-22 14:41:28,724 - aiogram.event - INFO - Update id=378313287 is handled. Duration 2006 ms by bot id=7980684199
+2025-05-22 14:41:28,724 - aiogram.event - INFO - Update id=378313303 is handled. Duration 1999 ms by bot id=7980684199
+2025-05-22 14:41:28,725 - aiogram.event - INFO - Update id=378313319 is handled. Duration 1996 ms by bot id=7980684199
+2025-05-22 14:41:28,726 - aiogram.event - INFO - Update id=378313277 is handled. Duration 2020 ms by bot id=7980684199
+2025-05-22 14:41:28,726 - aiogram.event - INFO - Update id=378313268 is handled. Duration 2025 ms by bot id=7980684199
+2025-05-22 14:41:28,727 - aiogram.event - INFO - Update id=378313321 is handled. Duration 1998 ms by bot id=7980684199
+2025-05-22 14:41:28,727 - aiogram.event - INFO - Update id=378313310 is handled. Duration 2000 ms by bot id=7980684199
+2025-05-22 14:41:28,728 - aiogram.event - INFO - Update id=378313279 is handled. Duration 2017 ms by bot id=7980684199
+2025-05-22 14:41:28,728 - aiogram.event - INFO - Update id=378313294 is handled. Duration 2006 ms by bot id=7980684199
+2025-05-22 14:41:28,729 - aiogram.event - INFO - Update id=378313281 is handled. Duration 2017 ms by bot id=7980684199
+2025-05-22 14:41:28,729 - aiogram.event - INFO - Update id=378313312 is handled. Duration 2002 ms by bot id=7980684199
+2025-05-22 14:41:28,730 - aiogram.event - INFO - Update id=378313313 is handled. Duration 2002 ms by bot id=7980684199
+2025-05-22 14:41:28,730 - aiogram.event - INFO - Update id=378313302 is handled. Duration 2005 ms by bot id=7980684199
+2025-05-22 14:41:28,730 - aiogram.event - INFO - Update id=378313272 is handled. Duration 2028 ms by bot id=7980684199
+2025-05-22 14:41:28,731 - aiogram.event - INFO - Update id=378313318 is handled. Duration 2003 ms by bot id=7980684199
+2025-05-22 14:41:28,731 - aiogram.event - INFO - Update id=378313297 is handled. Duration 2008 ms by bot id=7980684199
+2025-05-22 14:41:28,732 - aiogram.event - INFO - Update id=378313278 is handled. Duration 2026 ms by bot id=7980684199
+2025-05-22 14:41:28,733 - aiogram.event - INFO - Update id=378313323 is handled. Duration 2004 ms by bot id=7980684199
+2025-05-22 14:41:28,735 - aiogram.event - INFO - Update id=378313324 is handled. Duration 2005 ms by bot id=7980684199
+2025-05-22 14:41:51,314 - app.handlers.message_collector - INFO - Received stop_collecting command in chat -4847620559
+2025-05-22 14:41:51,747 - app.handlers.message_collector - INFO - Stopped collecting messages in chat -4847620559
+2025-05-22 14:41:51,751 - aiogram.event - INFO - Update id=378313325 is handled. Duration 443 ms by bot id=7980684199
+2025-05-22 14:41:53,171 - app.handlers.message_collector - INFO - Received start_collecting command in chat -4847620559
+2025-05-22 14:41:53,331 - app.handlers.message_collector - INFO - Started collecting messages in chat -4847620559
+2025-05-22 14:41:53,334 - aiogram.event - INFO - Update id=378313326 is handled. Duration 167 ms by bot id=7980684199
+2025-05-22 14:41:56,797 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -4847620559 from Lobaaashik or id 811775689
+2025-05-22 14:41:56,798 - app.handlers.message_collector - INFO - Processing message in chat -4847620559
+2025-05-22 14:41:56,827 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:56,830 - app.handlers.message_collector - INFO - Saving message to database from user Lobaaashik
+2025-05-22 14:41:56,845 - app.handlers.message_collector - INFO - Successfully saved message from Lobaaashik in chat -4847620559
+2025-05-22 14:41:56,846 - aiogram.event - INFO - Update id=378313327 is handled. Duration 51 ms by bot id=7980684199
+2025-05-22 14:41:59,666 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -4847620559 from Lobaaashik or id 811775689
+2025-05-22 14:41:59,667 - app.handlers.message_collector - INFO - Processing message in chat -4847620559
+2025-05-22 14:41:59,704 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:41:59,716 - app.handlers.message_collector - INFO - Saving message to database from user Lobaaashik
+2025-05-22 14:41:59,738 - app.handlers.message_collector - INFO - Successfully saved message from Lobaaashik in chat -4847620559
+2025-05-22 14:41:59,738 - aiogram.event - INFO - Update id=378313328 is handled. Duration 74 ms by bot id=7980684199
+2025-05-22 14:42:01,505 - app.handlers.message_collector - INFO - Received stop_collecting command in chat -4847620559
+2025-05-22 14:42:01,713 - app.handlers.message_collector - INFO - Stopped collecting messages in chat -4847620559
+2025-05-22 14:42:01,720 - aiogram.event - INFO - Update id=378313329 is handled. Duration 223 ms by bot id=7980684199
+2025-05-22 14:42:07,093 - app.handlers.message_collector - INFO - Received help command in chat -4847620559
+2025-05-22 14:42:07,189 - aiogram.event - INFO - Update id=378313330 is handled. Duration 101 ms by bot id=7980684199
+2025-05-22 14:42:10,282 - app.handlers.analyze - INFO - Received ask_chat_gpt command in chat -4847620559
+2025-05-22 14:42:10,363 - aiogram.event - INFO - Update id=378313331 is handled. Duration 84 ms by bot id=7980684199
+2025-05-22 14:42:28,789 - app.handlers.analyze - INFO - Received question for chat -4847620559: Какое эмоциональное состояние у чата?
+2025-05-22 14:42:28,861 - app.services.analytics - INFO - Starting ask_chat_messages_gpt for chat -4847620559 with question: Какое эмоциональное состояние у чата?
+2025-05-22 14:42:28,909 - app.services.analytics - INFO - Database connection established
+2025-05-22 14:42:28,922 - app.services.analytics - INFO - Found 5 messages for chat -4847620559 since 2025-05-21 14:42:28.910408
+2025-05-22 14:42:28,923 - app.services.analytics - INFO - Sending request to Yandex GPT for chat -4847620559
+2025-05-22 14:42:28,924 - app.services.analytics - INFO - Sending request to Yandex GPT, prompt length: 257 chars
+2025-05-22 14:42:29,597 - app.services.analytics - ERROR - Yandex GPT error: 401 — {"error":{"grpcCode":16,"httpCode":401,"message":"Unknown api key 't1.9****YNBA (A0FF8912)'","httpStatus":"Unauthorized","details":[]}}
+2025-05-22 14:42:29,601 - app.services.analytics - ERROR - Error in ask_yandex_gpt: YandexGPT error: 401 — {"error":{"grpcCode":16,"httpCode":401,"message":"Unknown api key 't1.9****YNBA (A0FF8912)'","httpStatus":"Unauthorized","details":[]}}
+Traceback (most recent call last):
+  File "/app/src/app/services/analytics.py", line 39, in ask_yandex_gpt
+    raise Exception(f"YandexGPT error: {resp.status} — {error_text}")
+Exception: YandexGPT error: 401 — {"error":{"grpcCode":16,"httpCode":401,"message":"Unknown api key 't1.9****YNBA (A0FF8912)'","httpStatus":"Unauthorized","details":[]}}
+2025-05-22 14:42:29,606 - app.services.analytics - ERROR - Error in ask_chat_messages_gpt: YandexGPT error: 401 — {"error":{"grpcCode":16,"httpCode":401,"message":"Unknown api key 't1.9****YNBA (A0FF8912)'","httpStatus":"Unauthorized","details":[]}}
+Traceback (most recent call last):
+  File "/app/src/app/services/analytics.py", line 98, in ask_chat_messages_gpt
+    result = await ask_yandex_gpt(prompt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/app/services/analytics.py", line 39, in ask_yandex_gpt
+    raise Exception(f"YandexGPT error: {resp.status} — {error_text}")
+Exception: YandexGPT error: 401 — {"error":{"grpcCode":16,"httpCode":401,"message":"Unknown api key 't1.9****YNBA (A0FF8912)'","httpStatus":"Unauthorized","details":[]}}
+2025-05-22 14:42:29,695 - app.handlers.analyze - INFO - Successfully sent answer for chat -4847620559
+2025-05-22 14:42:29,695 - aiogram.event - INFO - Update id=378313332 is handled. Duration 910 ms by bot id=7980684199
+2025-05-22 14:45:21,735 - __main__ - INFO - Bot configuration:
+2025-05-22 14:45:21,736 - __main__ - INFO - - BOT_TOKEN: configured
+2025-05-22 14:45:21,737 - __main__ - INFO - - DATABASE_URL: postgresql://mood:mood_helper@db:5432/mood
+2025-05-22 14:45:21,737 - __main__ - INFO - - ADMIN_USER_ID: 811775689
+2025-05-22 14:45:21,738 - __main__ - INFO - Registered handlers in order of priority:
+2025-05-22 14:45:21,739 - __main__ - INFO - 1. 0x7fe6758a38f0
+2025-05-22 14:45:21,740 - __main__ - INFO - 2. 0x7fe672ed7f50
+2025-05-22 14:45:21,740 - __main__ - INFO - 3. analyze_router
+2025-05-22 14:45:21,741 - __main__ - INFO - 4. message_collector
+2025-05-22 14:45:21,741 - __main__ - INFO - Daily analysis task scheduled
+2025-05-22 14:45:21,741 - __main__ - INFO - Bot started, listening for messages...
+2025-05-22 14:45:21,742 - aiogram.dispatcher - INFO - Start polling
+2025-05-22 14:45:21,743 - app.services.analytics - INFO - Started daily analysis scheduler
+2025-05-22 14:45:21,743 - app.services.analytics - INFO - Scheduled next daily analysis in 29678.256405 seconds (at 2025-05-22 23:00:00)
+2025-05-22 14:45:22,159 - aiogram.dispatcher - INFO - Run polling for bot @moodchecker2_bot id=7980684199 - 'mood_checker'
+2025-05-22 14:46:00,659 - app.handlers.analyze - INFO - Received ask_chat_gpt command in chat -4847620559
+2025-05-22 14:46:01,052 - aiogram.event - INFO - Update id=378313333 is handled. Duration 397 ms by bot id=7980684199
+2025-05-22 14:46:05,460 - app.handlers.analyze - INFO - Received question for chat -4847620559: Какое эмоциональное состояние у чата?
+2025-05-22 14:46:05,555 - app.services.analytics - INFO - Starting ask_chat_messages_gpt for chat -4847620559 with question: Какое эмоциональное состояние у чата?
+2025-05-22 14:46:05,617 - app.services.analytics - INFO - Database connection established
+2025-05-22 14:46:05,653 - app.services.analytics - INFO - Found 5 messages for chat -4847620559 since 2025-05-21 14:46:05.618281
+2025-05-22 14:46:05,654 - app.services.analytics - INFO - Sending request to Yandex GPT for chat -4847620559
+2025-05-22 14:46:05,654 - app.services.analytics - INFO - Sending request to Yandex GPT, prompt length: 257 chars
+2025-05-22 14:46:06,113 - app.services.analytics - ERROR - Yandex GPT error: 401 — {"error":{"grpcCode":16,"httpCode":401,"message":"Unknown api key 't1.9****YNBA (A0FF8912)'","httpStatus":"Unauthorized","details":[]}}
+2025-05-22 14:46:06,116 - app.services.analytics - ERROR - Error in ask_yandex_gpt: YandexGPT error: 401 — {"error":{"grpcCode":16,"httpCode":401,"message":"Unknown api key 't1.9****YNBA (A0FF8912)'","httpStatus":"Unauthorized","details":[]}}
+Traceback (most recent call last):
+  File "/app/src/app/services/analytics.py", line 39, in ask_yandex_gpt
+    raise Exception(f"YandexGPT error: {resp.status} — {error_text}")
+Exception: YandexGPT error: 401 — {"error":{"grpcCode":16,"httpCode":401,"message":"Unknown api key 't1.9****YNBA (A0FF8912)'","httpStatus":"Unauthorized","details":[]}}
+2025-05-22 14:46:06,120 - app.services.analytics - ERROR - Error in ask_chat_messages_gpt: YandexGPT error: 401 — {"error":{"grpcCode":16,"httpCode":401,"message":"Unknown api key 't1.9****YNBA (A0FF8912)'","httpStatus":"Unauthorized","details":[]}}
+Traceback (most recent call last):
+  File "/app/src/app/services/analytics.py", line 98, in ask_chat_messages_gpt
+    result = await ask_yandex_gpt(prompt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/app/services/analytics.py", line 39, in ask_yandex_gpt
+    raise Exception(f"YandexGPT error: {resp.status} — {error_text}")
+Exception: YandexGPT error: 401 — {"error":{"grpcCode":16,"httpCode":401,"message":"Unknown api key 't1.9****YNBA (A0FF8912)'","httpStatus":"Unauthorized","details":[]}}
+2025-05-22 14:46:06,256 - app.handlers.analyze - INFO - Successfully sent answer for chat -4847620559
+2025-05-22 14:46:06,258 - aiogram.event - INFO - Update id=378313334 is handled. Duration 798 ms by bot id=7980684199
+2025-05-22 14:47:18,670 - __main__ - INFO - Bot configuration:
+2025-05-22 14:47:18,671 - __main__ - INFO - - BOT_TOKEN: configured
+2025-05-22 14:47:18,672 - __main__ - INFO - - DATABASE_URL: postgresql://mood:mood_helper@db:5432/mood
+2025-05-22 14:47:18,673 - __main__ - INFO - - ADMIN_USER_ID: 811775689
+2025-05-22 14:47:18,674 - __main__ - INFO - Registered handlers in order of priority:
+2025-05-22 14:47:18,674 - __main__ - INFO - 1. 0x7ff43d64fb30
+2025-05-22 14:47:18,675 - __main__ - INFO - 2. 0x7ff43ac57050
+2025-05-22 14:47:18,676 - __main__ - INFO - 3. analyze_router
+2025-05-22 14:47:18,678 - __main__ - INFO - 4. message_collector
+2025-05-22 14:47:18,680 - __main__ - INFO - Daily analysis task scheduled
+2025-05-22 14:47:18,681 - __main__ - INFO - Bot started, listening for messages...
+2025-05-22 14:47:18,683 - aiogram.dispatcher - INFO - Start polling
+2025-05-22 14:47:18,685 - app.services.analytics - INFO - Started daily analysis scheduler
+2025-05-22 14:47:18,686 - app.services.analytics - INFO - Scheduled next daily analysis in 29561.313687 seconds (at 2025-05-22 23:00:00)
+2025-05-22 14:47:19,015 - aiogram.dispatcher - INFO - Run polling for bot @moodchecker2_bot id=7980684199 - 'mood_checker'
+2025-05-22 14:47:19,117 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Tinchurin_Maxim or id 1051394747
+2025-05-22 14:47:19,118 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:47:19,164 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:47:19,168 - app.handlers.message_collector - INFO - Message collection is disabled for chat -1002514779321
+2025-05-22 14:47:19,172 - aiogram.event - INFO - Update id=378313335 is handled. Duration 57 ms by bot id=7980684199
+2025-05-22 14:47:22,031 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Lobaaashik or id 811775689
+2025-05-22 14:47:22,032 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:47:22,060 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:47:22,062 - app.handlers.message_collector - INFO - Message collection is disabled for chat -1002514779321
+2025-05-22 14:47:22,066 - aiogram.event - INFO - Update id=378313336 is handled. Duration 36 ms by bot id=7980684199
+2025-05-22 14:47:26,604 - app.handlers.analyze - INFO - Received ask_chat_gpt command in chat -4847620559
+2025-05-22 14:47:26,997 - aiogram.event - INFO - Update id=378313337 is handled. Duration 395 ms by bot id=7980684199
+2025-05-22 14:47:34,369 - app.handlers.analyze - INFO - Received question for chat -4847620559: Какое эмоциональное состояние у чата?
+2025-05-22 14:47:34,464 - app.services.analytics - INFO - Starting ask_chat_messages_gpt for chat -4847620559 with question: Какое эмоциональное состояние у чата?
+2025-05-22 14:47:34,507 - app.services.analytics - INFO - Database connection established
+2025-05-22 14:47:34,515 - app.services.analytics - INFO - Found 5 messages for chat -4847620559 since 2025-05-21 14:47:34.508606
+2025-05-22 14:47:34,517 - app.services.analytics - INFO - Sending request to Yandex GPT for chat -4847620559
+2025-05-22 14:47:34,519 - app.services.analytics - INFO - Sending request to Yandex GPT, prompt length: 257 chars
+2025-05-22 14:47:34,992 - app.services.analytics - ERROR - Yandex GPT error: 403 — {"error":{"grpcCode":7,"httpCode":403,"message":"Permission denied","httpStatus":"Forbidden","details":[]}}
+2025-05-22 14:47:34,994 - app.services.analytics - ERROR - Error in ask_yandex_gpt: YandexGPT error: 403 — {"error":{"grpcCode":7,"httpCode":403,"message":"Permission denied","httpStatus":"Forbidden","details":[]}}
+Traceback (most recent call last):
+  File "/app/src/app/services/analytics.py", line 39, in ask_yandex_gpt
+    raise Exception(f"YandexGPT error: {resp.status} — {error_text}")
+Exception: YandexGPT error: 403 — {"error":{"grpcCode":7,"httpCode":403,"message":"Permission denied","httpStatus":"Forbidden","details":[]}}
+2025-05-22 14:47:34,997 - app.services.analytics - ERROR - Error in ask_chat_messages_gpt: YandexGPT error: 403 — {"error":{"grpcCode":7,"httpCode":403,"message":"Permission denied","httpStatus":"Forbidden","details":[]}}
+Traceback (most recent call last):
+  File "/app/src/app/services/analytics.py", line 98, in ask_chat_messages_gpt
+    result = await ask_yandex_gpt(prompt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/app/services/analytics.py", line 39, in ask_yandex_gpt
+    raise Exception(f"YandexGPT error: {resp.status} — {error_text}")
+Exception: YandexGPT error: 403 — {"error":{"grpcCode":7,"httpCode":403,"message":"Permission denied","httpStatus":"Forbidden","details":[]}}
+2025-05-22 14:47:35,072 - app.handlers.analyze - INFO - Successfully sent answer for chat -4847620559
+2025-05-22 14:47:35,075 - aiogram.event - INFO - Update id=378313338 is handled. Duration 707 ms by bot id=7980684199
+2025-05-22 14:47:56,588 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Tinchurin_Maxim or id 1051394747
+2025-05-22 14:47:56,589 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:47:56,653 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:47:56,656 - app.handlers.message_collector - INFO - Message collection is disabled for chat -1002514779321
+2025-05-22 14:47:56,661 - aiogram.event - INFO - Update id=378313339 is handled. Duration 80 ms by bot id=7980684199
+2025-05-22 14:48:58,049 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Tinchurin_Maxim or id 1051394747
+2025-05-22 14:48:58,051 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:48:58,107 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:48:58,119 - app.handlers.message_collector - INFO - Message collection is disabled for chat -1002514779321
+2025-05-22 14:48:58,125 - aiogram.event - INFO - Update id=378313340 is handled. Duration 87 ms by bot id=7980684199
+2025-05-22 14:49:29,274 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Ivan_962 or id 1957553965
+2025-05-22 14:49:29,275 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:49:29,342 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:49:29,347 - app.handlers.message_collector - INFO - Message collection is disabled for chat -1002514779321
+2025-05-22 14:49:29,354 - aiogram.event - INFO - Update id=378313341 is handled. Duration 85 ms by bot id=7980684199
+2025-05-22 14:49:46,918 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Ivan_962 or id 1957553965
+2025-05-22 14:49:46,920 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:49:46,984 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:49:46,988 - app.handlers.message_collector - INFO - Message collection is disabled for chat -1002514779321
+2025-05-22 14:49:46,996 - aiogram.event - INFO - Update id=378313342 is handled. Duration 83 ms by bot id=7980684199
+2025-05-22 14:49:56,410 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Tinchurin_Maxim or id 1051394747
+2025-05-22 14:49:56,411 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:49:56,478 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:49:56,483 - app.handlers.message_collector - INFO - Message collection is disabled for chat -1002514779321
+2025-05-22 14:49:56,491 - aiogram.event - INFO - Update id=378313343 is handled. Duration 86 ms by bot id=7980684199
+2025-05-22 14:50:09,682 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Ivan_962 or id 1957553965
+2025-05-22 14:50:09,683 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:50:09,742 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:50:09,745 - app.handlers.message_collector - INFO - Message collection is disabled for chat -1002514779321
+2025-05-22 14:50:09,749 - aiogram.event - INFO - Update id=378313344 is handled. Duration 69 ms by bot id=7980684199
+2025-05-22 14:50:10,493 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Tinchurin_Maxim or id 1051394747
+2025-05-22 14:50:10,495 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:50:10,533 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:50:10,537 - app.handlers.message_collector - INFO - Message collection is disabled for chat -1002514779321
+2025-05-22 14:50:10,541 - aiogram.event - INFO - Update id=378313345 is handled. Duration 50 ms by bot id=7980684199
+2025-05-22 14:50:15,001 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Ivan_962 or id 1957553965
+2025-05-22 14:50:15,002 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:50:15,045 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:50:15,054 - app.handlers.message_collector - INFO - Message collection is disabled for chat -1002514779321
+2025-05-22 14:50:15,060 - aiogram.event - INFO - Update id=378313346 is handled. Duration 64 ms by bot id=7980684199
+2025-05-22 14:50:28,362 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Tinchurin_Maxim or id 1051394747
+2025-05-22 14:50:28,363 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:50:28,402 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:50:28,405 - app.handlers.message_collector - INFO - Message collection is disabled for chat -1002514779321
+2025-05-22 14:50:28,408 - aiogram.event - INFO - Update id=378313347 is handled. Duration 50 ms by bot id=7980684199
+2025-05-22 14:50:28,874 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Ivan_962 or id 1957553965
+2025-05-22 14:50:28,875 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:50:28,924 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:50:28,926 - app.handlers.message_collector - INFO - Message collection is disabled for chat -1002514779321
+2025-05-22 14:50:28,930 - aiogram.event - INFO - Update id=378313348 is handled. Duration 59 ms by bot id=7980684199
+2025-05-22 14:50:45,175 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Ivan_962 or id 1957553965
+2025-05-22 14:50:45,177 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:50:45,240 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:50:45,242 - app.handlers.message_collector - INFO - Message collection is disabled for chat -1002514779321
+2025-05-22 14:50:45,246 - aiogram.event - INFO - Update id=378313349 is handled. Duration 77 ms by bot id=7980684199
+2025-05-22 14:50:49,801 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Tinchurin_Maxim or id 1051394747
+2025-05-22 14:50:49,803 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:50:49,840 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:50:49,844 - app.handlers.message_collector - INFO - Message collection is disabled for chat -1002514779321
+2025-05-22 14:50:49,846 - aiogram.event - INFO - Update id=378313350 is handled. Duration 48 ms by bot id=7980684199
+2025-05-22 14:51:08,892 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Ivan_962 or id 1957553965
+2025-05-22 14:51:08,894 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:51:08,963 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:51:08,967 - app.handlers.message_collector - INFO - Message collection is disabled for chat -1002514779321
+2025-05-22 14:51:08,972 - aiogram.event - INFO - Update id=378313351 is handled. Duration 85 ms by bot id=7980684199
+2025-05-22 14:51:10,899 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Ivan_962 or id 1957553965
+2025-05-22 14:51:10,906 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:51:10,940 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:51:10,943 - app.handlers.message_collector - INFO - Message collection is disabled for chat -1002514779321
+2025-05-22 14:51:10,946 - aiogram.event - INFO - Update id=378313352 is handled. Duration 51 ms by bot id=7980684199
+2025-05-22 14:51:15,324 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Tinchurin_Maxim or id 1051394747
+2025-05-22 14:51:15,326 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:51:15,368 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:51:15,372 - app.handlers.message_collector - INFO - Message collection is disabled for chat -1002514779321
+2025-05-22 14:51:15,377 - aiogram.event - INFO - Update id=378313353 is handled. Duration 54 ms by bot id=7980684199
+2025-05-22 14:51:21,357 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Ivan_962 or id 1957553965
+2025-05-22 14:51:21,358 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:51:21,408 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:51:21,412 - app.handlers.message_collector - INFO - Message collection is disabled for chat -1002514779321
+2025-05-22 14:51:21,418 - aiogram.event - INFO - Update id=378313354 is handled. Duration 66 ms by bot id=7980684199
+2025-05-22 14:51:27,498 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Ivan_962 or id 1957553965
+2025-05-22 14:51:27,499 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:51:27,556 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:51:27,560 - app.handlers.message_collector - INFO - Message collection is disabled for chat -1002514779321
+2025-05-22 14:51:27,565 - aiogram.event - INFO - Update id=378313355 is handled. Duration 69 ms by bot id=7980684199
+2025-05-22 14:51:50,812 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Tinchurin_Maxim or id 1051394747
+2025-05-22 14:51:50,814 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:51:50,863 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:51:50,865 - app.handlers.message_collector - INFO - Message collection is disabled for chat -1002514779321
+2025-05-22 14:51:50,870 - aiogram.event - INFO - Update id=378313356 is handled. Duration 62 ms by bot id=7980684199
+2025-05-22 14:52:00,945 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Ivan_962 or id 1957553965
+2025-05-22 14:52:00,947 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:52:00,984 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:52:00,989 - app.handlers.message_collector - INFO - Message collection is disabled for chat -1002514779321
+2025-05-22 14:52:00,994 - aiogram.event - INFO - Update id=378313357 is handled. Duration 51 ms by bot id=7980684199
+2025-05-22 14:52:20,784 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Tinchurin_Maxim or id 1051394747
+2025-05-22 14:52:20,785 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:52:20,854 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:52:20,856 - app.handlers.message_collector - INFO - Message collection is disabled for chat -1002514779321
+2025-05-22 14:52:20,859 - aiogram.event - INFO - Update id=378313358 is handled. Duration 79 ms by bot id=7980684199
+2025-05-22 14:52:22,905 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Ivan_962 or id 1957553965
+2025-05-22 14:52:22,909 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:52:22,958 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:52:22,961 - app.handlers.message_collector - INFO - Message collection is disabled for chat -1002514779321
+2025-05-22 14:52:22,963 - aiogram.event - INFO - Update id=378313359 is handled. Duration 63 ms by bot id=7980684199
+2025-05-22 14:52:37,874 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Ivan_962 or id 1957553965
+2025-05-22 14:52:37,875 - app.handlers.message_collector - INFO - Message has no text, skipping
+2025-05-22 14:52:37,876 - aiogram.event - INFO - Update id=378313360 is handled. Duration 8 ms by bot id=7980684199
+2025-05-22 14:52:42,244 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Ivan_962 or id 1957553965
+2025-05-22 14:52:42,245 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:52:42,288 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:52:42,293 - app.handlers.message_collector - INFO - Message collection is disabled for chat -1002514779321
+2025-05-22 14:52:42,299 - aiogram.event - INFO - Update id=378313361 is handled. Duration 58 ms by bot id=7980684199
+2025-05-22 14:52:51,895 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Tinchurin_Maxim or id 1051394747
+2025-05-22 14:52:51,896 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:52:51,933 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:52:51,936 - app.handlers.message_collector - INFO - Message collection is disabled for chat -1002514779321
+2025-05-22 14:52:51,939 - aiogram.event - INFO - Update id=378313362 is handled. Duration 46 ms by bot id=7980684199
+2025-05-22 14:53:08,817 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Ivan_962 or id 1957553965
+2025-05-22 14:53:08,817 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:53:08,853 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:53:08,855 - app.handlers.message_collector - INFO - Message collection is disabled for chat -1002514779321
+2025-05-22 14:53:08,859 - aiogram.event - INFO - Update id=378313363 is handled. Duration 45 ms by bot id=7980684199
+2025-05-22 14:53:48,828 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Ivan_962 or id 1957553965
+2025-05-22 14:53:48,829 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:53:48,891 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:53:48,899 - app.handlers.message_collector - INFO - Message collection is disabled for chat -1002514779321
+2025-05-22 14:53:48,914 - aiogram.event - INFO - Update id=378313364 is handled. Duration 91 ms by bot id=7980684199
+2025-05-22 14:53:54,326 - app.handlers.message_collector - INFO - RECEIVED MESSAGE in chat -1002514779321 from Ivan_962 or id 1957553965
+2025-05-22 14:53:54,327 - app.handlers.message_collector - INFO - Processing message in chat -1002514779321
+2025-05-22 14:53:54,405 - app.handlers.message_collector - INFO - Database connection established
+2025-05-22 14:53:54,409 - app.handlers.message_collector - INFO - Message collection is disabled for chat -1002514779321
+2025-05-22 14:53:54,414 - aiogram.event - INFO - Update id=378313365 is handled. Duration 93 ms by bot id=7980684199

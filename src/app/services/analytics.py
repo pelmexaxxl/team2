@@ -14,11 +14,11 @@ async def ask_yandex_gpt(prompt: str, model: str = "yandexgpt-lite") -> str:
     """Отправляет запрос к Yandex GPT API и возвращает ответ."""
     logger.info(f"Sending request to Yandex GPT, prompt length: {len(prompt)} chars")
     headers = {
-        "Authorization": f"Api-Key {settings.yandex_api_key}",
+        "Authorization": f"Bearer {settings.yandex_api_key}",
         "Content-Type": "application/json"
     }
     payload = {
-        "modelUri": f"gpt://{model}/latest",
+        "modelUri": f"gpt://b1gadudlvblk40h9bm6i/yandexgpt-lite",
         "completionOptions": {
             "stream": False,
             "temperature": 0.3,
@@ -44,6 +44,63 @@ async def ask_yandex_gpt(prompt: str, model: str = "yandexgpt-lite") -> str:
     except Exception as e:
         logger.error(f"Error in ask_yandex_gpt: {e}", exc_info=True)
         raise
+
+
+async def ask_chat_messages_gpt(chat_id: int, question: str, hours: int = 24) -> str:
+    """
+    Отправляет сообщения из чата за указанный период в Яндекс ГПТ с заданным вопросом.
+    
+    Args:
+        chat_id: ID чата
+        question: Вопрос для Яндекс ГПТ
+        hours: Количество часов, за которые нужно взять сообщения (по умолчанию 24)
+    
+    Returns:
+        Ответ от Яндекс ГПТ
+    """
+    logger.info(f"Starting ask_chat_messages_gpt for chat {chat_id} with question: {question}")
+    
+    try:
+        conn = await asyncpg.connect(settings.database_url)
+        logger.info("Database connection established")
+        
+        # Получаем сообщения из чата за указанный период
+        period_start = datetime.utcnow() - timedelta(hours=hours)
+        rows = await conn.fetch("""
+            SELECT username, content, created_at
+            FROM messages
+            WHERE chat_id = $1 AND created_at > $2
+            ORDER BY created_at
+        """, chat_id, period_start)
+        
+        await conn.close()
+        
+        logger.info(f"Found {len(rows)} messages for chat {chat_id} since {period_start}")
+        
+        if not rows:
+            return f"В чате нет сообщений за последние {hours} часов."
+        
+        # Форматируем сообщения для отправки в Яндекс ГПТ
+        messages_text = "\n".join(
+            f"[{row['username'] or 'Пользователь'} {row['created_at'].strftime('%H:%M:%S')}] {row['content']}" 
+            for row in rows
+        )
+        
+        # Формируем запрос с вопросом пользователя
+        prompt = (
+            f"Ниже приведены сообщения из чата за последние {hours} часов.\n\n"
+            f"{messages_text}\n\n"
+            f"Вопрос: {question}"
+        )
+        
+        # Отправляем запрос в Яндекс ГПТ
+        logger.info(f"Sending request to Yandex GPT for chat {chat_id}")
+        result = await ask_yandex_gpt(prompt)
+        
+        return result
+    except Exception as e:
+        logger.error(f"Error in ask_chat_messages_gpt: {e}", exc_info=True)
+        return f"Произошла ошибка при обработке запроса: {str(e)}"
 
 
 async def analyze_chat_messages(chat_id=None):
