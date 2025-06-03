@@ -1,6 +1,8 @@
-from . import admin
-from . import analyze
-from . import message_collector
-from . import user
+# src/app/handlers/__init__.py
+from . import (
+    admin, analyze, message_collector, user,
+    welcome, cabinet, plots
+)
 
-__all__ = ["admin", "analyze", "message_collector", "user"]
+__all__ = ["admin", "analyze", "message_collector",
+           "user", "welcome", "cabinet", "plots"]

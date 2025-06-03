@@ -3,3 +3,5 @@ venv/
 logs/
 __pycache__/
 .env
+logs/bot_log.log
+src/alembic/versions/__pycache__

@@ -36,15 +36,32 @@ async def process_description(msg: Message, state: FSMContext):
     await state.set_state(CreatePollFSM.waiting_for_question_text)
 
 
-# @router.message(CreatePollFSM.waiting_for_question_text)
-# async def process_question_text(msg: Message, state: FSMContext):
-#     await state.update_data(question_text=msg.text)
-#     kb = InlineKeyboardMarkup(inline_keyboard=[
-#         [InlineKeyboardButton(text="Открытый ответ", callback_data="open")],
-#         [InlineKeyboardButton(text="С вариантами", callback_data="closed")]
-#     ])
-#     await msg.answer("Выберите тип вопроса:", reply_markup=kb)
-#     await state.set_state(CreatePollFSM.waiting_for_question_type)
+@router.message(CreatePollFSM.waiting_for_question_text)
+async def process_question_text(msg: Message, state: FSMContext):
+    await state.update_data(question_text=msg.text)
+    kb = InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text="Открытый ответ", callback_data="open")],
+        [InlineKeyboardButton(text="С варианами",  callback_data="closed")]
+    ])
+    await msg.answer("Выберите тип вопроса:", reply_markup=kb)
+    await state.set_state(CreatePollFSM.waiting_for_question_type)
+
+
+@router.callback_query(CreatePollFSM.waiting_for_question_type)
+async def choose_type(cb: CallbackQuery, state: FSMContext):
+    qtext = (await state.get_data())["question_text"]
+    if cb.data == "open":
+        # сразу добавляем без options
+        questions = (await state.get_data()).get("questions", [])
+        questions.append({"text": qtext, "options": []})
+        await state.update_data(questions=questions)
+        await ask_add_more(cb, state)                 # переиспользуем хелпер ниже
+    else:
+        await state.update_data(current_question_text=qtext)
+        await cb.message.answer("Введите варианты через запятую:")
+        await state.set_state(CreatePollFSM.waiting_for_options)
+    await cb.answer()
+
 
 
 @router.message(CreatePollFSM.waiting_for_question_text)
@@ -175,3 +192,35 @@ async def analis(msg: Message, session: AsyncSession):
 
         # Отправляем результаты в Telegram
     await msg.answer(response_message)
+
+@router.message(F.text == "/save_template")
+async def save_template(msg: Message, session: AsyncSession, state: FSMContext):
+    data = await state.get_data()
+    if not data.get("questions"):
+        await msg.answer("Сначала создайте опрос через /create_poll.")
+        return
+    tpl = PollTemplate(
+        title=data["title"],
+        json_body=json.dumps(data["questions"]),
+        author_id=msg.from_user.id,
+        description="Создано через бот"
+    )
+    session.add(tpl)
+    await session.commit()
+    await msg.answer("✅ Шаблон сохранён!")
+
+@router.message(F.text.startswith("/use_template"))
+async def use_template(msg: Message, session: AsyncSession, state: FSMContext):
+    try:
+        tpl_id = int(msg.text.split()[1])
+    except Exception:
+        await msg.answer("Формат: /use_template <id>")
+        return
+    tpl = await session.get(PollTemplate, tpl_id)
+    if not tpl:
+        await msg.answer("Шаблон не найден.")
+        return
+    await state.update_data(title=tpl.title,
+                            questions=json.loads(tpl.json_body))
+    await msg.answer("Шаблон загружен, отправьте *да* чтобы опубликовать или *нет* для правок.", parse_mode="Markdown")
+    await state.set_state(CreatePollFSM.confirming)
