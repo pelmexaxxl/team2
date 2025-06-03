@@ -1,7 +1,8 @@
 from aiogram import Router, F
 from aiogram.types import Message, ChatMemberUpdated
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import insert, update, select
+from sqlalchemy import select, update
+from sqlalchemy.dialects.postgresql import insert
 from app.models.extras import ChatSettings
 
 router = Router(name="welcome_router")
