@@ -33,7 +33,9 @@ storage = MemoryStorage()
 dp = Dispatcher(storage=storage)
 
 # Middleware
-dp.message.middleware(DatabaseMiddleware())
+db_mw = DatabaseMiddleware()
+dp.message.middleware(db_mw)
+dp.callback_query.middleware(db_mw)
 
 # Регистрация обработчиков с приоритетами
 # Команды имеют более высокий приоритет
