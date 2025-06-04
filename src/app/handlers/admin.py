@@ -61,15 +61,31 @@ async def choose_type(cb: CallbackQuery, state: FSMContext):
         await cb.message.answer("Введите варианты через запятую:")
         await state.set_state(CreatePollFSM.waiting_for_options)
     await cb.answer()
+# ───────── helper "add one more question?" ─────────────────────
+async def ask_add_more(event: CallbackQuery | Message, state: FSMContext):
+    """
+    Показывает клавиатуру «Добавить вопрос / Готово» и
+    переводит FSM в waiting_for_add_another.
+    """
+    kb = InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text="➕ Добавить вопрос", callback_data="add_another_yes"),
+         InlineKeyboardButton(text="✅ Готово",          callback_data="add_another_no")]
+    ])
+
+    # event может быть CallbackQuery или Message
+    send = event.message.answer if isinstance(event, CallbackQuery) else event.answer
+    await send("Хотите добавить ещё один вопрос?", reply_markup=kb)
+
+    await state.set_state(CreatePollFSM.waiting_for_add_another)
+# ───────────────────────────────────────────────────────────────
 
 
-
-@router.message(CreatePollFSM.waiting_for_question_text)
-async def process_question_type(msg: Message, state: FSMContext):
-    # if cb.data == "closed":
-    await state.update_data(current_question_text=msg.text)
-    await msg.answer("Введите варианты ответа через запятую:")
-    await state.set_state(CreatePollFSM.waiting_for_options)
+# @router.message(CreatePollFSM.waiting_for_question_text)
+# async def process_question_type(msg: Message, state: FSMContext):
+#     # if cb.data == "closed":
+#     await state.update_data(current_question_text=msg.text)
+#     await msg.answer("Введите варианты ответа через запятую:")
+#     await state.set_state(CreatePollFSM.waiting_for_options)
     # else:
     #     await state.set_state(CreatePollFSM.confirming)
     #     await confirm_poll(cb.message, state)

@@ -1,5 +1,6 @@
 from aiogram import Bot, Dispatcher
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
+from aiogram.fsm.state import State, default_state
 import asyncio
 import logging
 
@@ -39,8 +40,8 @@ dp.callback_query.middleware(db_mw)
 
 # Регистрация обработчиков с приоритетами
 # Команды имеют более высокий приоритет
-user_router.message.filter(lambda msg: msg.text and msg.text.startswith("/"))
-admin_router.message.filter(lambda msg: msg.text and msg.text.startswith("/"))
+# user_router.message.filter(lambda msg: msg.text and msg.text.startswith("/"))
+# admin_router.message.filter(lambda msg: msg.text and msg.text.startswith("/"))
 # Для анализа не устанавливаем фильтр по команде, так как нам нужны и обычные сообщения для FSM
 
 # Важен порядок подключения роутеров!
