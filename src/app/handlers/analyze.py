@@ -1,11 +1,14 @@
 from aiogram import Router, F
 from aiogram.filters import Command
 from aiogram.types import Message
+import asyncpg
 from app.services.analytics import analyze_chat_messages, ask_chat_messages_gpt
 from app.configs import settings
 import logging
 from aiogram.fsm.context import FSMContext
+from sqlalchemy.ext.asyncio import AsyncSession
 from aiogram.fsm.state import State, StatesGroup
+from app.models.user import User, Role
 
 
 router = Router(name="analyze_router")
@@ -114,3 +117,82 @@ async def process_question(message: Message, state: FSMContext):
     except Exception as e:
         logger.error(f"Error sending question to Yandex GPT: {e}", exc_info=True)
         await message.answer(f"Произошла ошибка при запроса: {str(e)}")
+
+
+@router.message(Command("analyze_result"))
+async def handle_analyze_result(
+    message: Message,
+    session: AsyncSession,
+):
+    # Проверяем, что команда вызвана в личных сообщениях
+    if message.chat.type != "private":
+        await message.answer("Эта команда доступна только в личных сообщениях.")
+        return
+
+    # Получаем информацию о пользователе
+    user = await session.get(User, message.from_user.id)
+    
+    # Проверяем роль пользователя
+    if not user or user.role not in [Role.HR, Role.ADMIN]:
+        await message.answer("Доступ запрещен. Требуется роль HR или Admin.")
+        return
+
+    # Проверяем, передан ли chat_id в команде
+    if not message.text or len(message.text.split()) < 2:
+        await message.answer("Использование: /analyze_result <chat_id>")
+        return
+
+    try:
+        chat_id = int(message.text.split()[1])
+    except ValueError:
+        await message.answer("Некорректный chat_id. Укажите числовой идентификатор чата.")
+        return
+
+    # Получаем последний результат анализа для указанного чата
+    conn = await asyncpg.connect(settings.database_url)
+        # Получаем последний результат анализа для указанного чата
+    row = await conn.fetchrow("""
+        SELECT analyzed_at, result
+        FROM chat_analytics
+        WHERE chat_id = $1
+        ORDER BY analyzed_at DESC
+        LIMIT 1
+    """, chat_id)
+
+    if not row:
+        await message.answer(f"Нет данных анализа для чата {chat_id}.")
+        return
+
+    # Форматируем ответ
+    chat_info = f"Чат ID: {chat_id}"
+    response = (
+        f"📊 Анализ чата: {chat_info}\n"
+        f"🕒 Время анализа: {row['analyzed_at']}\n"
+        f"📝 Результат:\n{row['result']}"
+    )
+
+    await message.answer(response)
+
+
+@router.message(Command("get_chat_id"))
+async def get_chat_id_handler(message: Message):
+    """Обработчик для получения ID текущего чата"""
+    chat_id = message.chat.id
+    chat_type = message.chat.type
+    
+    # Определяем тип чата для понятного вывода
+    chat_type_name = {
+        "private": "личные сообщения",
+        "group": "групповой чат",
+        "supergroup": "супергруппа",
+        "channel": "канал"
+    }.get(chat_type, "неизвестный тип чата")
+    
+    response = (
+        f"📌 Информация о текущем чате:\n"
+        f"🆔 ID чата: <code>{chat_id}</code>\n"
+        f"📝 Тип чата: {chat_type_name}\n"
+        f"👥 Название: {message.chat.title or 'Нет названия'}"
+    )
+    
+    await message.answer(response, parse_mode="HTML")

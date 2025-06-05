@@ -10,9 +10,9 @@ from .base import Base
 
 
 class Role(PyEnum):
-    ADMIN = 'admin'
-    EMPLOYEE = 'employee'
-    HR = 'hr'
+    ADMIN = 'Администратор'
+    EMPLOYEE = 'Сотрудник'
+    HR = 'HR'
 
 
 class User(Base):

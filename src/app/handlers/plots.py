@@ -1,36 +1,59 @@
-import io, asyncio
+import io
 import matplotlib.pyplot as plt
 from aiogram import Router, F
-from aiogram.types import Message, InputFile
+from aiogram.types import Message
+from aiogram.types.input_file import BufferedInputFile  # Изменение здесь
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import select, func
-from app.models.user import UserAnswer, Question, User, Role
+from sqlalchemy import select
+from app.models.user import UserAnswer, Question
 
 router = Router(name="plots_router")
 
 @router.message(F.text == "/chart_results")
 async def chart_results(msg: Message, session: AsyncSession):
-    q = await session.scalars(select(Question))
-    questions = q.all()
-    if not questions:
+    # Получаем последний вопрос
+    q = await session.scalars(select(Question).order_by(Question.id.desc()).limit(1))
+    question = q.first()
+    
+    if not question:
         await msg.answer("Опросов не найдено.")
         return
-
-    counts = [0]*len(questions[0].options)
-    for question in questions:
-        answers = await session.scalars(select(UserAnswer).where(UserAnswer.question_id == question.id))
-        for a in answers:
-            counts[a.answer_index] += 1
-
+    
+    # Инициализируем счетчики
+    counts = [0] * len(question.options)
+    
+    # Получаем все ответы на этот вопрос
+    answers = await session.scalars(
+        select(UserAnswer).where(UserAnswer.question_id == question.id)
+    )
+    answers = answers.all()
+    
+    # Считаем ответы
+    for answer in answers:
+        if 0 <= answer.answer_index < len(counts):
+            counts[answer.answer_index] += 1
+    
+    # Создаем график
     fig, ax = plt.subplots()
-    ax.bar(range(len(counts)), counts)
-    ax.set_xticks(range(len(counts)))
-    ax.set_title("Сводный результат по последнему опросу")
+    ax.bar(question.options, counts)
+    ax.set_title(f"Результаты опроса: {question.text}")
+    ax.set_ylabel("Количество ответов")
+    
+    # Сохраняем в буфер
     buf = io.BytesIO()
-    fig.savefig(buf, format='png')
+    plt.tight_layout()
+    fig.savefig(buf, format='png', dpi=100)
     buf.seek(0)
-    await msg.answer_photo(InputFile(buf, filename="chart.png"))
+    
+    # Создаем BufferedInputFile вместо InputFile
+    photo = BufferedInputFile(buf.getvalue(), filename="chart.png")
+    
+    # Отправляем
+    await msg.answer_photo(photo)
+    
+    # Закрываем ресурсы
     plt.close(fig)
+    buf.close()
 
 @router.message(F.text.startswith("/my_dynamics"))
 async def my_dynamics(msg: Message, session: AsyncSession):
@@ -48,5 +71,5 @@ async def my_dynamics(msg: Message, session: AsyncSession):
     buf = io.BytesIO()
     fig.savefig(buf, format='png')
     buf.seek(0)
-    await msg.answer_photo(InputFile(buf, filename="trend.png"))
+    await msg.answer_photo(BufferedInputFile(buf.getvalue(), filename="trend.png"))
     plt.close(fig)

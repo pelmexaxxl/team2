@@ -18,11 +18,11 @@ async def ask_yandex_gpt(prompt: str, model: str = "yandexgpt-lite") -> str:
         "Content-Type": "application/json"
     }
     payload = {
-        "modelUri": f"gpt://b1gadudlvblk40h9bm6i/yandexgpt-lite",
+        "modelUri": f"gpt://b1gadudlvblk40h9bm6i/yandexgpt",
         "completionOptions": {
             "stream": False,
             "temperature": 0.3,
-            "maxTokens": 500
+            "maxTokens": 10000
         },
         "messages": [
             {"role": "system", "text": "Ты анализируешь сообщения из командного чата и оцениваешь их тональность."},
@@ -65,7 +65,7 @@ async def ask_chat_messages_gpt(chat_id: int, question: str, hours: int = 24) ->
         logger.info("Database connection established")
         
         # Получаем сообщения из чата за указанный период
-        period_start = datetime.utcnow() - timedelta(hours=hours)
+        period_start = datetime.now() - timedelta(hours=hours)
         rows = await conn.fetch("""
             SELECT username, content, created_at
             FROM messages
@@ -113,7 +113,7 @@ async def analyze_chat_messages(chat_id=None):
     try:
         conn = await asyncpg.connect(settings.database_url)
         logger.info("Database connection established")
-        yesterday = datetime.utcnow() - timedelta(days=1)
+        yesterday = datetime.now() - timedelta(days=1)
         
         if chat_id:
             # Analyze a specific chat

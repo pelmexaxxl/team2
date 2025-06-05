@@ -47,7 +47,7 @@ async def start_registration(msg: Message, state: FSMContext, session: AsyncSess
             """
             )
     else:
-        await msg.answer(f"Добро пожаловать, {user.role.value.upper()}!")
+        await msg.answer(f"Добро пожаловать, Ваша роль - {user.role.value}!\n\n🔧 /start — регистрация и приветственное сообщение.\n\n📚 /help — список всех команд и краткая справка.\n\n🧭 /cabinet — настройка личного кабинета и доступ к дополнительным функциям.")
 
 
 @router.message(F.text == "/send_poll")

@@ -23,6 +23,7 @@ from app.db.db import async_session_maker
 
 from app.middlewares.db import DatabaseMiddleware
 from app.services.analytics import run_daily_analysis
+from app.utils.emotions import setup_bot_commands
 from aiogram.fsm.storage.memory import MemoryStorage
 
 
@@ -32,6 +33,7 @@ logger = logging.getLogger(__name__)
 bot = Bot(settings.BOT_TOKEN)
 storage = MemoryStorage()
 dp = Dispatcher(storage=storage)
+
 
 # Middleware
 db_mw = DatabaseMiddleware()
@@ -62,6 +64,7 @@ async def main():
     try:
         # Проверка настроек
         logger.info("Bot configuration:")
+        await setup_bot_commands(bot)
         logger.info(f"- BOT_TOKEN: {'configured' if settings.BOT_TOKEN else 'missing'}")
         logger.info(f"- DATABASE_URL: {settings.database_url}")
         logger.info(f"- ADMIN_USER_ID: {settings.ADMIN_USER_ID}")
